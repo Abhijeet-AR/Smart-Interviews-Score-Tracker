@@ -90,3 +90,5 @@ launchctl unload ~/Library/LaunchAgents/com.ar.scoreTracker.plist - unloading
 Done! Your script will execute at the specified time daily.
 
 Note: Your computer needs to be running for the script to be executed. If the computer is in sleep script will be executed once you wake your computer but if your computer is turned off your script will not be run. You can use pythonanywhere and kaggle to run your script on a remote server. 
+
+Feel free to PR and suggest any changes. Do follow [these](https://help.github.com/articles/creating-a-pull-request/) instructions to make a valid PR.

@@ -87,7 +87,7 @@ def process(names):
     scope = ['https://spreadsheets.google.com/feeds',
              'https://www.googleapis.com/auth/drive']
 
-    file_path = '/Users/AR/Documents/Programming/Python/Pycharm/ScoreTracker/smartinterviewsscores-a81911f5ec09.json'
+    file_path = 'smartinterviewsscores-a81911f5ec09.json'
     credentials = ServiceAccountCredentials.from_json_keyfile_name(file_path, scope)
     gc = gspread.authorize(credentials)
 

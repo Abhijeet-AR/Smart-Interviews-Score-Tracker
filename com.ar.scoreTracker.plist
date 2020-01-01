@@ -9,24 +9,25 @@
 		<key>ProgramArguments</key>
 		<array>
 			<string>/usr/local/bin/python3</string>
+
+			<!-- Change the program location below -->
 			<string>/Users/AR/Documents/Programming/Python/Pycharm/ScoreTracker/tracker.py</string>
 		</array>
 
 		<key>StartCalendarInterval</key>
 		<array>
 			<dict>
+
 			  <key>Hour</key>
+			  <!-- Hours part of the time -->
 			  <integer>09</integer>
+
 			  <key>Minute</key>
+			  <!-- Minutes part of the time -->
 			  <integer>00</integer>
+
 			</dict>
 
-			<dict>
-			  <key>Hour</key>
-			  <integer>20</integer>
-			  <key>Minute</key>
-			  <integer>00</integer>
-			</dict>
 		</array>
 
 	</dict>

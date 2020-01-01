@@ -1,0 +1,37 @@
+<!-- reference : https://www.youtube.com/watch?v=oBVb2mbksLY -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Label</key>
+		<string>com.ar.scoreTracker</string>
+		<key>ProgramArguments</key>
+		<array>
+			<string>/usr/local/bin/python3</string>
+			<string>/Users/AR/Documents/Programming/Python/Pycharm/ScoreTracker/tracker.py</string>
+		</array>
+
+		<key>StartCalendarInterval</key>
+		<array>
+			<dict>
+			  <key>Hour</key>
+			  <integer>09</integer>
+			  <key>Minute</key>
+			  <integer>00</integer>
+			</dict>
+
+			<dict>
+			  <key>Hour</key>
+			  <integer>20</integer>
+			  <key>Minute</key>
+			  <integer>00</integer>
+			</dict>
+		</array>
+
+	</dict>
+</plist>
+
+
+<!-- launchctl load ~/Library/LaunchAgents/com.ar.scoreTracker.plist - loading into launchctl--> 
+<!-- launchctl unload ~/Library/LaunchAgents/com.ar.scoreTracker.plist - unloading-->

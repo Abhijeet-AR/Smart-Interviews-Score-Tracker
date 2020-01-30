@@ -94,6 +94,9 @@ def process(names):
     smart_interviews_url = os.environ.get('sm_url')
     smart_interviews_sheet = gc.open_by_url(smart_interviews_url).sheet1
 
+    expected_raise = 0
+    target_ar = 0
+
     print('Retrieving Data')
     for name in names:
         row = smart_interviews_sheet.find(name).row
@@ -102,6 +105,16 @@ def process(names):
         temp_data = [date_today.strftime("%d %b %y"), str(row - 2)]
         for col in useful_cols:
             temp_data.append(data[col])
+
+        if name == 'Abhijeet Reddy':
+            col = useful_cols[-1]
+
+            while row > 2 and target_ar < 300:
+                row -= 1
+                expected_raise += 1
+
+                target_data = smart_interviews_sheet.row_values(row)
+                target_ar = int(target_data[col]) - int(temp_data[-1])
 
         insert_data[name] = temp_data
 
@@ -114,6 +127,10 @@ def process(names):
                 sheet = gc.open('Smart Interviews Tracker').worksheet(name)
 
                 row_no = get_row_no(sheet, gc, names[0])
+
+                if name == 'Abhijeet Reddy':
+                    sheet.update_acell('A2', target_ar)
+                    sheet.update_acell('B2', expected_raise)
 
                 last_rank = sheet.cell(row_no, 2).value
                 total_score = sheet.cell(row_no, 13).value
